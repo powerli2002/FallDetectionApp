@@ -1,24 +1,36 @@
 ## FallDetectionApp
 
+A desktop program based on pyside2 is implemented, which uses yolov5 and KNN algorithm to detect falls.
+
 实现了一个基于pyside2的桌面程序, 使用yolov5以及KNN算法进行跌倒检测.
 
-## 使用
+## How To Use 使用
+
+Installation environment: 
 
 安装环境: 
 
 `pip install -r requirement.txt`
 
+Run the desktop program:
+
 运行桌面程序:
 
 `python StartUp.py`
+
+Run the tester:
 
 运行检测程序:
 
 `python predict.py`
 
+Training model (data set required)
+
 训练模型(需要数据集)
 
 `python train.py`
+
+Obtain the results of the evaluation
 
 获得评估:
 
@@ -26,11 +38,13 @@
 
 
 
+Pay attention to model path modification and pattern change.
+
 注意模型路径修改和模式改变
 
-## 关于KNN算法
+## KNN algorithm 
 
-使用meidapipe进行人体关键点提取，再使用knn算法进行分类。对视频每帧调用mp.solutions.pose进行人体关键点提取，分别存入对应csv文件。再对数据集进行划分。
+使用mediapipe进行人体关键点提取，再使用knn算法进行分类。对视频每帧调用mp.solutions.pose进行人体关键点提取，分别存入对应csv文件。再对数据集进行划分。
 
 数据集中包括人体关键点数据，共100列。第一列为标签，后面为33个关键点*3坐标数据。
 
@@ -54,7 +68,7 @@
 
 
 
-## YOLOv5算法
+## YOLOv5 Model
 
 ### 训练过程
 
@@ -96,7 +110,7 @@ nms_iou=0.5，门限值为0.5时
 
 
 
-## YOLOv5与KNN的结合尝试
+## An attempt to combine YOLOv5 and KNN
 
 
 
