@@ -2,6 +2,32 @@
 
 实现了一个基于pyside2的桌面程序, 使用yolov5以及KNN算法进行跌倒检测.
 
+## 使用
+
+安装环境: 
+
+`pip install -r requirement.txt`
+
+运行桌面程序:
+
+`python StartUp.py`
+
+运行检测程序:
+
+`python predict.py`
+
+训练模型(需要数据集)
+
+`python train.py`
+
+获得评估:
+
+`python get_map.py`
+
+
+
+注意模型路径修改和模式改变
+
 ## 关于KNN算法
 
 使用meidapipe进行人体关键点提取，再使用knn算法进行分类。对视频每帧调用mp.solutions.pose进行人体关键点提取，分别存入对应csv文件。再对数据集进行划分。
@@ -20,7 +46,7 @@
 
 调用sklearn.metrics 库，对模型在测试集上进行相关指标的评估。
 
-<img src="C:\Users\userlzj\AppData\Roaming\Typora\typora-user-images\image-20240131124555524.png" alt="image-20240131124555524" style="zoom:50%;" />
+<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130652628.png" alt="image-20240131130652628" style="zoom:67%;" />
 
 
 
@@ -48,7 +74,7 @@ yolov5s版本模型，sgd优化器，momentum = 0.937，
 
 最大学习率0.01，最小学习率为其0.01倍。
 
-<img src="C:\Users\userlzj\AppData\Roaming\Typora\typora-user-images\image-20240131124750552.png" alt="image-20240131124750552" style="zoom:67%;" />
+<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130706380.png" alt="image-20240131130706380" style="zoom:67%;" />
 
 
 
@@ -72,9 +98,9 @@ nms_iou=0.5，门限值为0.5时
 
 ## YOLOv5与KNN的结合尝试
 
-<img src="C:\Users\userlzj\AppData\Roaming\Typora\typora-user-images\image-20240131125023750.png" alt="image-20240131125023750" style="zoom:67%;" />
 
 
+<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130743753.png" alt="image-20240131130743753" style="zoom:67%;" />
 
 
 
@@ -88,7 +114,5 @@ nms_iou=0.5，门限值为0.5时
 
 ## Reference
 
-https://github.com/qqwweee/keras-yolo3/
-https://github.com/Cartucho/mAP
-https://github.com/Ma-Dan/keras-yolo4
+[bubbliiiing/yolov5-pytorch: 这是一个YoloV5-pytorch的源码，可以用于训练自己的模型。 (github.com)](https://github.com/bubbliiiing/yolov5-pytorch)
 https://github.com/ultralytics/yolov5
