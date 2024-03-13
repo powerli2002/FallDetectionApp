@@ -7,6 +7,8 @@ Medical_Datasets/
 lfw/
 logs/
 model_data/
+model_data/yolov5_x.pth
+model_data/yolov5_l.pth
 .temp_map_out/
 
 # Byte-compiled / optimized / DLL files

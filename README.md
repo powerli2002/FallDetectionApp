@@ -60,7 +60,9 @@ Pay attention to model path modification and pattern change.
 
 调用sklearn.metrics 库，对模型在测试集上进行相关指标的评估。
 
-<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130652628.png" alt="image-20240131130652628" style="zoom:67%;" />
+
+
+![image-20240131132325847](assets/image-20240131132325847.png)
 
 
 
@@ -88,7 +90,7 @@ yolov5s版本模型，sgd优化器，momentum = 0.937，
 
 最大学习率0.01，最小学习率为其0.01倍。
 
-<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130706380.png" alt="image-20240131130706380" style="zoom:67%;" />
+![image-20240131132336627](assets/image-20240131132336627.png)
 
 
 
@@ -114,7 +116,7 @@ nms_iou=0.5，门限值为0.5时
 
 
 
-<img src="E:\E-CODE\DL\fall_detection\FallDetectionApp\assets\image-20240131130743753.png" alt="image-20240131130743753" style="zoom:67%;" />
+![image-20240131132347993](assets/image-20240131132347993.png)
 
 
 
